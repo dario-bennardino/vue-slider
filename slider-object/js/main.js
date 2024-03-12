@@ -27,11 +27,23 @@ createApp({
                 this.counter = this.images.length - 1;
             }
         },
-       
 
         autoPlay() {
-            setInterval(() => this.nextPrev(true), 2000);
+            setInterval(() => this.nextPrev(true), 3000);
         },
+
+        // autoPlay() {
+        //     setInterval(() => {
+        //         if(this.isPlayerActive){
+        //             this.nextPrev(true)
+        //         }
+        //     }, 3000 )    
+        // },
+       
+
+        stopAutoplay() {
+            clearInterval(this.autoplayInterval);
+        }
     },
 
     mounted(){
