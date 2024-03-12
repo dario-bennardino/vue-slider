@@ -27,13 +27,15 @@ createApp({
                 this.counter = this.images.length - 1;
             }
         },
-        // autoPlay(){
-        //     setInterval{ ()=> this.nextPrev(true), 2000 }
-        // }
+       
+
+        autoPlay() {
+            setInterval(() => this.nextPrev(true), 2000);
+        },
     },
 
     mounted(){
-        // this.autoplay()
+        this.autoPlay()
     }
 }).mount('#app')
 

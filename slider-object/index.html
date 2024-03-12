@@ -43,36 +43,38 @@
 
                         </div>
                         <div class="my-thumbnails position-relative">
-                            <!-- prev -->
+                            <!-- Bottone prev -->
                             <div @click="nextPrev(false)" class="my-previous position-absolute">
                                 <span class="my-prev-hook"></span>
                             </div>
 
+
+                            <!-- Ciclo v-for per caricare le immagini nelle Thumbnail -->
+                            <div v-for="(image, index) in images" :key="index" class="my-thumbnail" >
+                                <img class="img-fluid" :src="image" :alt="'Thumbnail of Image ' + (index + 1)">
+                            </div>
+
                             <!-- <div class="my-thumbnail active">
-                                <img v-for="element in images" class="img-fluid" :src="images[counter]">
+                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
+                            </div>
+
+                            <div class="my-thumbnail">
+                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
+                            </div>
+
+                            <div class="my-thumbnail">
+                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
+                            </div>
+
+                            <div class="my-thumbnail">
+                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
+                            </div>
+
+                            <div class="my-thumbnail">
+                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
                             </div> -->
 
-                            <div class="my-thumbnail active">
-                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
-                            </div>
-
-                            <div class="my-thumbnail">
-                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
-                            </div>
-
-                            <div class="my-thumbnail">
-                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
-                            </div>
-
-                            <div class="my-thumbnail">
-                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
-                            </div>
-
-                            <div class="my-thumbnail">
-                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
-                            </div>
-
-                            <!-- next -->
+                            <!-- Bottone next -->
                             <div @click="nextPrev(true)" class="my-next position-absolute">
                                 <span class="my-next-hook"></span>
                             </div>
